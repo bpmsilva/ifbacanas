@@ -12,8 +12,10 @@ class Jogo:
     def marcar_posicao(self, i, jogador):
         self.lista[i] = jogador
 
-jogo = Jogo()
+    def jogo_acabou(self):
+        print('Jogo não acabou')
 
+jogo = Jogo()
 for rodada in range(9):
     jogo.imprime_tabuleiro()
 
@@ -24,5 +26,5 @@ for rodada in range(9):
         jogo.marcar_posicao(i, 'O')
     else:
         jogo.marcar_posicao(i, 'X')
-
+    jogo.jogo_acabou()
 
